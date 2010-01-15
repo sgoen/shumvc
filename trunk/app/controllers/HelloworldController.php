@@ -1,6 +1,7 @@
 <?php
-class HelloworldController implements Shumvc_WebControllerInterface {
+class HelloworldController extends Shumvc_BaseWebController implements Shumvc_WebControllerInterface {
     public function index(){
-        echo '<h1>Hello World</h1>'; 
+        $message = 'Hello World';
+        include(dirname(__FILE__).'/../templates/helloworld.index.php');
     }
 }
