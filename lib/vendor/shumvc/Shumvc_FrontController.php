@@ -5,8 +5,6 @@ class Shumvc_FrontController {
         $exploded_uri = explode('/',$uri);
         $controller = null;
         
-        echo $uri.'<br>';
-        
         // check if the class exists
         if(class_exists(ucfirst($exploded_uri[0]).'Controller')){
                 $con = ucfirst($exploded_uri[0]).'Controller';
