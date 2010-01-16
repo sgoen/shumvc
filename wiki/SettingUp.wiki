@@ -1,5 +1,3 @@
-_still under construction_
-
 =Setting Up Shumvc=
 
 ==1. Obtaining the source==
