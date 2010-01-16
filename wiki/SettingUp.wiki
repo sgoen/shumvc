@@ -3,6 +3,8 @@
 ==1. Obtaining the source==
 Currently there is no stable release of shumvc. But the source a available from the svn trunk. You should know how this works ;)
 
+The source currently contains a helloworld app which I use for simple test purposes.
+
 As soon as a stable release is available for download I will update this wiki.
 
 ==2. Setting up your webserver==
