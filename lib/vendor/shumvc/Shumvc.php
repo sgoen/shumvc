@@ -1,5 +1,6 @@
 <?php
 final class Shumvc {
+    
     public static function autoload ($classname) {
             $directories = array(
                 '../lib/vendor/shumvc/',

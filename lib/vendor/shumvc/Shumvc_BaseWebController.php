@@ -13,30 +13,29 @@ class Shumvc_BaseWebController {
         $class = strtolower(str_replace('Controller', '', $tmp_class));
         
         // create a string with the full path
-        $template_path = dirname(__FILE__).'/../../../app/templates/'.$class.'.'.$function.'.php';    
+        $template_path = $class.'.'.$function;    
         
-        echo $this->initSerpentTemplate($vars);
+        echo $this->initSerpentTemplate($template_path, $vars);
     }
     
-    private function initSerpentTemplate($vars){
-        $dir = dirname(__FILE__).'/../../../app/';
+    private function initSerpentTemplate($template_path, $vars){
         // init serpent
         $serpent = new serpent();
-        $serpent->compile_dir   = $dir.'templates_c/';
-        $serpent->force_compile = true;
-        $serpent->default_resource = 'file';
-        $serpent->default_compiler = 'serpent';
-        $serpent->setCharset('utf-8');
+        $serpent->compile_dir = DIR_TEMPLATES_C;
+        $serpent->force_compile = SERPENT_FORCE_COMPILE;
+        $serpent->default_resource = SERPENT_DEFAULT_RESOURCE;
+        $serpent->default_compiler = SERPENT_DEFAULT_COMPILER;
+        $serpent->setCharset(SERPENT_CHARSET);
 
         // init resource
         $serpent->addPluginConfig('resource', 'file', array(
-            'template_dir' => $dir.'templates/',
+            'template_dir' => DIR_TEMPLATES,
             'suffix' => '.tpl'
         ));
 
         // render template with data
         $serpent->pass($vars);
-        return $serpent->render('helloworld.index');
+        return $serpent->render($template_path);
     }
     
 }
