@@ -11,6 +11,7 @@ $array = array(
     'DIR_APP' => DIR_BASEDIR.'/app',
     'DIR_TEMPLATES' => DIR_BASEDIR.'/app/templates',
     'DIR_TEMPLATES_C' => DIR_BASEDIR.'/app/templates_c',
+    'DIR_MODELS' => DIR_BASEDIR.'/app/models',
     
     // Define Serpent options
     'SERPENT_FORCE_COMPILE' => true,
@@ -22,6 +23,13 @@ $array = array(
     'SHUMVC_APP_TITLE' => 'Shumvc - Hello World',
     'SHUMVC_APP_STYLE' => 'default.css',
     'SHUMVC_DEFAULT_CONTROLLER' => 'helloworld',
+    
+    // Database parameters
+    'SHUMVC_DB_TYPE' => 'mysql',
+    'SHUMVC_DB_HOST' => 'localhost',
+    'SHUMVC_DB_NAME' => 'phpmvc',
+    'SHUMVC_DB_USER' => 'phpmvc',
+    'SHUMVC_DB_PASS' => 'test',
 );
 
 Shumvc::define_array($array, $keys);

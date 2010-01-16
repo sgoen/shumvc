@@ -7,11 +7,11 @@ spl_autoload_register(array('Doctrine', 'autoload'));
 spl_autoload_register(array('Shumvc', 'autoload'));
 
 // Doctrine ...
-Doctrine::loadModels(dirname(__FILE__).'/../app/models');
+Doctrine::loadModels(DIR_MODELS);
 $manager = Doctrine_Manager::getInstance();
 
 // At this point no actual connection to the database is created
-$conn = Doctrine_Manager::connection('mysql://phpmvc:test@localhost/phpmvc');
+$conn = Doctrine_Manager::connection(SHUMVC_DB_TYPE.'://'.SHUMVC_DB_USER.':'.SHUMVC_DB_PASS.'@'.SHUMVC_DB_HOST.'/'.SHUMVC_DB_NAME);
 
 // The first time the connection is needed, it is instantiated
 // This query triggers the connection to be created
