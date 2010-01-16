@@ -1,1 +1,7 @@
 _still under construction_
+
+=Setting Up Shumvc=
+
+==1. Download the source==
+==2. Setting up your webserver==
+==3. Configuring Shumvc==
