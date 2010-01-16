@@ -2,6 +2,16 @@ _still under construction_
 
 =Setting Up Shumvc=
 
-==1. Download the source==
+==1. Obtaining the source==
+Currently there is no stable release of shumvc. But the source a available from the svn trunk. You should know how this works ;)
+
+As soon as a stable release is available for download I will update this wiki.
+
 ==2. Setting up your webserver==
+For use of shumvc you should properly configure your virtual host to point to the web/ directory in the shumvc folder.
+Also make sure mod_rewrite is enabled for use of the .htaccess file which can be found in the web folder.
+
 ==3. Configuring Shumvc==
+Setting up is easy, just make sure you properly configure the config.php file within the config directory.
+
+Important is the DEPLOYMENT_URL. If you decided to let your vhost point to the shumvc folder instead of the web folder the index if found on /web/index.php so your DEPLOYMENT_URL should be /web/.
