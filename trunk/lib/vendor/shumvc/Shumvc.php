@@ -17,4 +17,14 @@ final class Shumvc {
                 }
             }
     }
+    
+    public function define_array( $array, $keys = NULL ){
+        foreach( $array as $key => $value ){
+            $keyname = ($keys ? $keys . "_" : "") . $key;
+            if( is_array( $array[$key] ) )
+                define_array( $array[$key], $keyname );
+            else
+                define( $keyname, $value );
+        }
+    }
 }

@@ -13,7 +13,7 @@ class Shumvc_BaseWebController {
         $class = strtolower(str_replace('Controller', '', $tmp_class));
         
         // create a string with the full path
-        $template_path = $class.'.'.$function;    
+        $template_path = $class.'.'.$function;  
         
         echo $this->initSerpentTemplate($template_path, $vars);
     }
@@ -32,10 +32,20 @@ class Shumvc_BaseWebController {
             'template_dir' => DIR_TEMPLATES,
             'suffix' => '.tpl'
         ));
+        
+        // add the shumvc vars to the vars array
+        $vars['shumvc_app'] = $this->getShumvVars();
 
         // render template with data
         $serpent->pass($vars);
         return $serpent->render($template_path);
     }
     
+    private function getShumvVars(){
+        $shumvc_vars = array(
+            'title' => SHUMVC_APP_TITLE
+        );
+        
+        return $shumvc_vars; 
+    }
 }
