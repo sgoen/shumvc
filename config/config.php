@@ -20,6 +20,7 @@ $array = array(
     
     // Define the default page properties such as title etc.
     'SHUMVC_APP_TITLE' => 'Shumvc - Hello World',
+    'SHUMVC_APP_STYLE' => 'default.css',
 );
 
 Shumvc::define_array($array, $keys);

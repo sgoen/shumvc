@@ -1,7 +1,7 @@
 <html>
     <head>
-        <title>~~$shumvc_app.title~</title>
-        <link rel="stylesheet" type="text/css" href="style/default.css">
+        ~~$shumvc_app.title~
+        ~~$shumvc_app.style~
     </head>
     <body>
         <h1>~~$message~</h1>
