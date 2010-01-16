@@ -1,3 +1,6 @@
 Options +FollowSymlinks
 RewriteEngine On
+rewritecond %{REQUEST_URI} !^/style/
+rewritecond %{REQUEST_URI} !^/js/
+rewritecond %{REQUEST_URI} !^/media/
 RewriteRule ^.*$ index.php

@@ -28,7 +28,7 @@ class Shumvc_FrontController {
     }
 
     private function handleError(){
-        echo 'not found';
+        include(DIR_BASEDIR.'/lib/vendor/shumvc/data/pages/404.php');
     }
   
 }
