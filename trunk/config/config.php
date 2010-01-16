@@ -18,9 +18,10 @@ $array = array(
     'SERPENT_DEFAULT_COMPILER' => 'serpent',
     'SERPENT_CHARSET' => 'utf-8',
     
-    // Define the default page properties such as title etc.
+    // Define the default shumvc properties such as title etc.
     'SHUMVC_APP_TITLE' => 'Shumvc - Hello World',
     'SHUMVC_APP_STYLE' => 'default.css',
+    'SHUMVC_DEFAULT_CONTROLLER' => 'helloworld',
 );
 
 Shumvc::define_array($array, $keys);
