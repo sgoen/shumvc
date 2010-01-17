@@ -1,4 +1,4 @@
 <?php
 interface Shumvc_WebControllerInterface {
-    public function index();
+    public function webIndex();
 }

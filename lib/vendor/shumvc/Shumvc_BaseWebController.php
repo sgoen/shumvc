@@ -7,13 +7,15 @@ class Shumvc_BaseWebController {
         
         // get the function in lowercase
         $function = strtolower($backtrace[1]['function']);
+	// remove the web prefix, this can be done better ..
+	$parsed_function = str_replace('web','',$function);
         
         // get the class in lowercase and excluse the "Controller" part
         $tmp_class = $backtrace[1]['class'];
         $class = strtolower(str_replace('Controller', '', $tmp_class));
         
         // create a string with the full path
-        $template_path = $class.'.'.$function;  
+        $template_path = $class.'.'.$parsed_function;  
         
         echo $this->initSerpentTemplate($template_path, $vars);
     }
@@ -34,14 +36,14 @@ class Shumvc_BaseWebController {
         ));
         
         // add the shumvc vars to the vars array
-        $vars['shumvc_app'] = $this->getShumvVars();
+        $vars['shumvc_app'] = $this->getShumvcVars();
 
         // render template with data
         $serpent->pass($vars);
         return $serpent->render($template_path);
     }
     
-    private function getShumvVars(){
+    private function getShumvcVars(){
         $shumvc_vars = array(
             'title' => '<title>'.SHUMVC_APP_TITLE.'</title>',
             'style' => '<link rel="stylesheet" type="text/css" href="style/'.SHUMVC_APP_STYLE.'" />',

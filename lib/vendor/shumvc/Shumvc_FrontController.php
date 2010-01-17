@@ -12,14 +12,16 @@ class Shumvc_FrontController {
                 
                 $con = ucfirst($exploded_uri[0]).'Controller';
                 $controller = new $con();
-                
+               
+		$function = 'web'.ucfirst($exploded[1]);
+		 
                 // check if the method exists
-                if(method_exists($controller, $exploded_uri[1])){
+                if(method_exists($controller, $function)){
                     // if found execute the submitted action    
-                    $controller->$exploded_uri[1]();
-                } else if($exploded_uri[1] == ''){
+                    $controller->$function();
+                } else if($function == 'web'){
                     // on empty execute the index
-                    $controller->index();
+                    $controller->webIndex();
                 } else {
                     $this->handleError();
                 }
@@ -30,7 +32,7 @@ class Shumvc_FrontController {
         } else {
             $con = ucfirst(SHUMVC_DEFAULT_CONTROLLER).'Controller';
             $controller = new $con();   
-            $controller->index();
+            $controller->webIndex();
         }
             
     }
