@@ -12,6 +12,6 @@ For use of shumvc you should properly configure your virtual host to point to th
 Also make sure mod_rewrite is enabled for use of the .htaccess file which can be found in the web folder.
 
 ==3. Configuring Shumvc==
-Setting up is easy, just make sure you properly configure the config.php file within the config directory.
+Setting up is easy, just make sure you properly configure the config.php file within the config directory. Also make sure the template_c folder in the app folder has rwx attributes for all users. (chmod 777)
 
 Important is the DEPLOYMENT_URL. If you decided to let your vhost point to the shumvc folder instead of the web folder the index if found on /web/index.php so your DEPLOYMENT_URL should be /web/.
