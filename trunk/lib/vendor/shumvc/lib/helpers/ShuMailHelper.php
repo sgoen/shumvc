@@ -1,5 +1,5 @@
 <?php
-class SimpleMailHelper(){
+class ShuMailHelper(){
     protected $from;
     protected $reply_to;
     protected $to;

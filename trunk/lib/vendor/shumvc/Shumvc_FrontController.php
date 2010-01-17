@@ -38,7 +38,7 @@ class Shumvc_FrontController {
     }
 
     private function handleError(){
-        include(DIR_BASEDIR.'/lib/vendor/shumvc/data/pages/404.php');
+        include(DIR_BASEDIR.'/lib/vendor/shumvc/lib/pages/404.php');
     }
   
 }

@@ -1,9 +1,24 @@
 <?php
+/**
+ * This file contains the Shumvc final class
+ *
+ * @author J.Smit <j.smit@sgoen.nl>
+ */
+/**
+ * Thus shumvc final class provides two important functions
+ * autoload of the used classes and a function to define an
+ * array of variables.
+ */
 final class Shumvc {
     
+    /**
+     * Autoloads a classname from the directories array
+     * @param string $classname name of the class to be loaded
+     */
     public static function autoload ($classname) {
             $directories = array(
                 '../lib/vendor/shumvc/',
+                '../lib/vendor/shumvc/lib/helpers',
                 '../app/controllers/',
                 '../app/models/',
                 '../lib/helpers/',
@@ -18,6 +33,11 @@ final class Shumvc {
             }
     }
     
+    /**
+     * Defines an array of variables so they are globally accessible.
+     * The index is used as the name of the variable.
+     * @param array() $array array of varaiables which should be defined
+     */
     public function define_array( $array, $keys = NULL ){
         foreach( $array as $key => $value ){
             $keyname = ($keys ? $keys . "_" : "") . $key;
