@@ -4,7 +4,7 @@ class Shumvc_FrontController {
     public function dispatch($uri){
         $exploded_uri = explode('/',$uri);
         $controller = null;
-        
+
         // check if submitted class is not empty
         if(ucfirst($exploded_uri[0]) != ''){
             // check if the class exists
@@ -13,8 +13,7 @@ class Shumvc_FrontController {
                 $con = ucfirst($exploded_uri[0]).'Controller';
                 $controller = new $con();
                
-		$function = 'web'.ucfirst($exploded_url[1]);
-		 
+                $function = 'web'.ucfirst($exploded_uri[1]);
                 // check if the method exists
                 if(method_exists($controller, $function)){
                     // if found execute the submitted action    

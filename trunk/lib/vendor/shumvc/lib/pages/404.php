@@ -8,7 +8,7 @@ body{
 	background-color:#424242;
 	font-family:Arial, Helvetica, sans-serif;
 	color:#e5e5e5;
-	background-image:url(media/img/bg.png);
+	background-image:url(/media/img/bg.png);
 	background-repeat:repeat-x;
 }
 h1{
@@ -36,7 +36,7 @@ h1{
 	float:left;
 	width:724px;
 	height:590px;
-	background-image:url(media/img/zombie.png);
+	background-image:url(/media/img/zombie.png);
 	background-position:right;
 	background-repeat:no-repeat;
 }
