@@ -46,7 +46,7 @@ class Shumvc_BaseWebController {
     private function getShumvcVars(){
         $shumvc_vars = array(
             'title' => '<title>'.SHUMVC_APP_TITLE.'</title>',
-            'style' => '<link rel="stylesheet" type="text/css" href="style/'.SHUMVC_APP_STYLE.'" />',
+            'style' => '<link rel="stylesheet" type="text/css" href="/style/'.SHUMVC_APP_STYLE.'" />',
         );
         
         return $shumvc_vars; 
