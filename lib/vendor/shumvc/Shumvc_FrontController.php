@@ -13,7 +13,7 @@ class Shumvc_FrontController {
                 $con = ucfirst($exploded_uri[0]).'Controller';
                 $controller = new $con();
                
-		$function = 'web'.ucfirst($exploded[1]);
+		$function = 'web'.ucfirst($exploded_url[1]);
 		 
                 // check if the method exists
                 if(method_exists($controller, $function)){
