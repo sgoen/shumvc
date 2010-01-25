@@ -1,6 +1,16 @@
 <?php
 class Shumvc_BaseWebController {
     
+    private $html_head_tags = array();
+
+    public function setTitle($title){
+        $this->html_head_tags['title'] = $title;
+    }
+    
+    public function setStylesheet($style){
+        $this->html_head_tags['style'] = $style;
+    }
+    
     public function showTemplate($vars){
         
         $backtrace = debug_backtrace(__FUNCTION__);
@@ -34,8 +44,7 @@ class Shumvc_BaseWebController {
             'template_dir' => DIR_TEMPLATES,
             'suffix' => '.tpl'
         ));
-        
-        // add the shumvc vars to the vars array
+
         $vars['shumvc_app'] = $this->getShumvcVars();
 
         // render template with data
@@ -44,11 +53,30 @@ class Shumvc_BaseWebController {
     }
     
     private function getShumvcVars(){
-        $shumvc_vars = array(
-            'title' => '<title>'.SHUMVC_APP_TITLE.'</title>',
-            'style' => '<link rel="stylesheet" type="text/css" href="/style/'.SHUMVC_APP_STYLE.'" />',
+	$title = '';
+        $style = '';
+
+        // check if a title is given by the controller, else use the default
+        // from the config file.
+        if($this->html_head_tags['title'] != ''){
+            $title = '<title>'.$this->html_head_tags['title'].'<title>';
+        } else {
+            $title = '<title>'.SHUMVC_APP_TITLE.'</title>';        
+        }
+
+        // check if a stylesheet is given by the controller, else use the
+        // default from the config file.
+        if($this->html_head_tags['title'] != ''){
+            $style = '<link rel="stylesheet" type="text/css" href="/style/'.$this->html_head_tags['style'].'" />';
+        } else {
+            $style = '<link rel="stylesheet" type="text/css" href="/style/'.SHUMVC_APP_STYLE.'" />';        
+        }
+
+	$shumvc_vars = array(
+            'title' => $title,
+            'style' => $style,
         );
-        
+	
         return $shumvc_vars; 
     }
 }
