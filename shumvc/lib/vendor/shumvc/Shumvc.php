@@ -17,11 +17,11 @@ final class Shumvc {
      */
     public static function autoload ($classname) {
             $directories = array(
-                '../lib/vendor/shumvc/',
-                '../lib/vendor/shumvc/lib/helpers',
-                '../app/controllers/',
-                '../app/models/',
-                '../lib/helpers/',
+                '../shumvc/lib/vendor/shumvc/',
+                '../shumvc/lib/vendor/shumvc/lib/helpers',
+                '../shumvc/app/controllers/',
+                '../shumvc/app/models/',
+                '../shumvc/lib/helpers/',
             );
  
             foreach ($directories as $directory) {
