@@ -5,7 +5,7 @@ define('DIR_BASEDIR', dirname(__FILE__).'/..');
 
 $array = array(
     // Define the url in which the project exists for proper url handling
-    'DEPLOYMENT_URL' => '/',
+    'DEPLOYMENT_URL' => '/shumvc/www/',
     
     // Define the directories
     'DIR_APP' => DIR_BASEDIR.'/app',
@@ -18,7 +18,7 @@ $array = array(
     'SERPENT_DEFAULT_RESOURCE' => 'file',
     'SERPENT_DEFAULT_COMPILER' => 'serpent',
     'SERPENT_CHARSET' => 'utf-8',
-    
+                                                                              
     // Define the default shumvc properties such as title etc.
     'SHUMVC_APP_TITLE' => 'Shumvc - Hello World',
     'SHUMVC_APP_STYLE' => 'default.css',
