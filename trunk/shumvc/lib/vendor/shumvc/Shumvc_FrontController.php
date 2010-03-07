@@ -1,7 +1,22 @@
 <?php
-class Shumvc_FrontController {
+/**
+ * @name Shumvc
+ * @author J.Smit <j.smit@sgoen.nl>
+ * @license MIT
+ */
+ 
+/**
+ * The FrontController dispatches the request by executing the proper
+ * action and function.
+ */
+ class Shumvc_FrontController {
     
-    public function dispatch($uri){
+     /**
+     * Checks the request and executes the proper class and function
+     *
+     * @param $uri
+     */
+     public function dispatch($uri){
         $exploded_uri = explode('/',$uri);
         $controller = null;
 
@@ -36,6 +51,9 @@ class Shumvc_FrontController {
             
     }
 
+    /**
+    * Basic 404 displaying
+    */
     private function handleError(){
         include(DIR_BASEDIR.'/lib/vendor/shumvc/lib/pages/404.php');
     }
