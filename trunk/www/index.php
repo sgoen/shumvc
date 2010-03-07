@@ -11,6 +11,9 @@ session_start();
 include(dirname(__FILE__).'/../shumvc/config/config.php');
 include(dirname(__FILE__).'/../shumvc/config/bootstrap.php');
 
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+
 $parsed_uri = parse_url($_SERVER['REQUEST_URI']);
 $uri = preg_replace(sprintf(':^%s:', DEPLOYMENT_URL), '', $parsed_uri['path']);
 
