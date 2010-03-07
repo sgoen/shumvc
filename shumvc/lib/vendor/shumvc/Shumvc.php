@@ -1,9 +1,10 @@
 <?php
 /**
- * This file contains the Shumvc final class
- *
+ * @name Shumvc
  * @author J.Smit <j.smit@sgoen.nl>
+ * @license MIT
  */
+ 
 /**
  * Thus shumvc final class provides two important functions
  * autoload of the used classes and a function to define an
@@ -13,6 +14,7 @@ final class Shumvc {
     
     /**
      * Autoloads a classname from the directories array
+     *
      * @param string $classname name of the class to be loaded
      */
     public static function autoload ($classname) {
@@ -36,6 +38,7 @@ final class Shumvc {
     /**
      * Defines an array of variables so they are globally accessible.
      * The index is used as the name of the variable.
+     *
      * @param array() $array array of varaiables which should be defined
      */
     public function define_array( $array, $keys = NULL ){
