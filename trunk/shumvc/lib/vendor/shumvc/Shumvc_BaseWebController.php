@@ -68,7 +68,7 @@ class Shumvc_BaseWebController {
 
         // check if a title is given by the controller, else use the default
         // from the config file.
-        if($this->html_head_tags['title'] != ''){
+        if(isset($this->html_head_tags['title'])){
             $title = '<title>'.$this->html_head_tags['title'].'<title>';
         } else {
             $title = '<title>'.SHUMVC_APP_TITLE.'</title>';        
@@ -76,7 +76,7 @@ class Shumvc_BaseWebController {
 
         // check if a stylesheet is given by the controller, else use the
         // default from the config file.
-        if($this->html_head_tags['title'] != ''){
+        if(isset($this->html_head_tags['style'])){
             $style = '<link rel="stylesheet" type="text/css" href="/style/'.$this->html_head_tags['style'].'" />';
         } else {
             $style = '<link rel="stylesheet" type="text/css" href="/style/'.SHUMVC_APP_STYLE.'" />';        
