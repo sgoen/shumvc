@@ -8,8 +8,7 @@ The source currently contains a helloworld app which I use for simple test purpo
 As soon as a stable release is available for download I will update this wiki.
 
 ==2. Setting up your webserver==
-For use of shumvc you should properly configure your virtual host to point to the web/ directory in the shumvc folder.
-Also make sure mod_rewrite is enabled for use of the .htaccess file which can be found in the web folder.
+A basic webserver will do fine. Make sure apache's mod_rewrite is enabled and the virtual host points to the www folder.
 
 ==3. Configuring Shumvc==
 Setting up is easy, just make sure you properly configure the config.php file within the config directory. Also make sure the template_c folder in the app folder has rwx attributes for all users. (chmod 777)
