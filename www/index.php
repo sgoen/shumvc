@@ -6,6 +6,9 @@ require_once(dirname(__FILE__).'/../shumvc/lib/vendor/serpent/serpent.class.php'
 spl_autoload_register(array('Doctrine', 'autoload'));
 spl_autoload_register(array('Shumvc', 'autoload'));
 
+// Define the app name
+define('APP_NAME', 'development');
+
 session_start();
 
 include(dirname(__FILE__).'/../shumvc/config/config.php');
