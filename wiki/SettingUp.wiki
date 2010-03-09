@@ -1,3 +1,5 @@
+#summary Short guide to setting up shumvc from source.
+
 =Setting Up Shumvc=
 
 ==1. Obtaining the source==
