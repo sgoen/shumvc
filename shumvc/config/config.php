@@ -11,7 +11,7 @@ $array = array(
     'DIR_APP' => DIR_BASEDIR.'/app',
     'DIR_TEMPLATES' => DIR_BASEDIR.'/app/templates',
     'DIR_TEMPLATES_C' => DIR_BASEDIR.'/app/templates_c',
-    'DIR_MODELS' => DIR_BASEDIR.'/app/models',
+    'DIR_MODELS' => DIR_BASEDIR.'/models',
     
     // Define Serpent options
     'SERPENT_FORCE_COMPILE' => true,
