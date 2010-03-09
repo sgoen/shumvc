@@ -21,7 +21,7 @@ final class Shumvc {
             $directories = array(
                 '../shumvc/lib/vendor/shumvc/',
                 '../shumvc/lib/vendor/shumvc/lib/helpers',
-                '../shumvc/app/'.APP_NAME.'/controllers/',
+                '../shumvc/apps/'.APP_NAME.'/controllers/',
                 '../shumvc/models/',
                 '../shumvc/lib/helpers/',
             );
