@@ -8,9 +8,9 @@ $array = array(
     'DEPLOYMENT_URL' => '/shumvc/www/',
     
     // Define the directories
-    'DIR_APP' => DIR_BASEDIR.'/app/'.APP_NAME.'/',
-    'DIR_TEMPLATES' => DIR_BASEDIR.'/app/'.APP_NAME.'/templates',
-    'DIR_TEMPLATES_C' => DIR_BASEDIR.'/app/'.APP_NAME.'/templates_c',
+    'DIR_APP' => DIR_BASEDIR.'/apps/'.APP_NAME.'/',
+    'DIR_TEMPLATES' => DIR_BASEDIR.'/apps/'.APP_NAME.'/templates',
+    'DIR_TEMPLATES_C' => DIR_BASEDIR.'/apps/'.APP_NAME.'/templates_c',
     'DIR_MODELS' => DIR_BASEDIR.'/models',
     
     // Define Serpent options
