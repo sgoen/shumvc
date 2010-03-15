@@ -1,0 +1,43 @@
+#summary The development roadmap for shumvc
+
+=Shumvc - Roadmap=
+This documents intents to provide information about what functionality the upcoming (and released) versions of shumvc have to offer. Released versions contain the revision number.
+==0.1 (rev #29)==
+This version is a basic setup for shumvc. It provides a limited but useful amount of functionality, these include:
+
+    * FrontController pattern
+    * Object Relational mapping (Doctrine)
+    * Template engine (php-serpent)
+    * single point of configuration
+
+==0.2 (rev #37)==
+This version adds several key functions to shumvc.
+
+    * multiple aplications
+
+==0.3==
+When writing the development philosophy I decided that shumvc has to be compatible with PHP 5.0.0. This means that some parts of the application have to be changed.
+At this moment it seems like the following should be done:
+
+    * Switching to another ORM, Doctrine requires PHP 5.2.3. _Though the system should be compatible with Doctrine non-the-less._
+
+
+At this point I don't know what else should be replaced therefor prior to releasing shumvc 0.3 I will test it on a very minimal PHP 5.0 web-server.
+==0.4==
+
+    * Documentation (wiki) of system requirements
+    * Dynamic URL's
+
+==0.5==
+
+    * Form factory for easy setting up forms
+
+==0.6==
+
+    * Scripts for easy CRUD generation
+    * Scripts for initial application setup
+
+==Beyond==
+Ideas for this mvc continue to evolve while developing. Therefor, at this point, I don't know what version 0.7 will have to offer.
+If you have any ideas about functionality which you would like to see please describe them in a _New Issue_ under the _Issues_ tab.
+
