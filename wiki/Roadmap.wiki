@@ -16,7 +16,7 @@ This version adds several key functions to shumvc.
     * multiple aplications
 
 ==0.3==
-When writing the development philosophy I decided that shumvc has to be compatible with PHP 5.0.0. This means that some parts of the application have to be changed.
+When writing the development philosophy I decided that shumvc has to be compatible with PHP 5.2.13. This means that some parts of the application have to be changed.
 At this moment it seems like the following should be done:
 
     * Switching to another ORM, Doctrine requires PHP 5.2.3. _Though the system should be compatible with Doctrine non-the-less._
@@ -40,4 +40,3 @@ At this point I don't know what else should be replaced therefor prior to releas
 ==Beyond==
 Ideas for this mvc continue to evolve while developing. Therefor, at this point, I don't know what version 0.7 will have to offer.
 If you have any ideas about functionality which you would like to see please describe them in a _New Issue_ under the _Issues_ tab.
-
