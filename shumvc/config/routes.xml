@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<routes>
+    <route>
+        <pattern>/</pattern>
+        <class>helloworld</class>
+        <method>index</method>
+    </route>
+    <route>
+        <pattern>/:class</pattern>
+        <class>:class</class>
+        <method>index</method>
+    </route>
+    <route>
+        <pattern>/:class/:method</pattern>
+        <class>:class</class>
+        <method>:method</method>
+    </route>
+    <route>
+        <pattern>/:class/:method/:id</pattern>
+        <class>:class</class>
+        <method>:method</method>
+        <elements>
+            <element>
+                <key>id</key>
+                <value>:id</value>
+            </element>
+        </elements>
+    </route>
+</routes>
