@@ -23,6 +23,7 @@ final class Shumvc {
                 '../shumvc/lib/vendor/shumvc/lib/helpers',
                 '../shumvc/apps/'.APP_NAME.'/controllers/',
                 '../shumvc/models/',
+                '../shumvc/models/generated/',
                 '../shumvc/lib/helpers/',
             );
  
