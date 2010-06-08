@@ -15,28 +15,29 @@ This version adds several key functions to shumvc.
 
     * multiple aplications
 
+==0.2.2==
+I decided to reconsider the whole design of the framework. This so it will be easier to work with and develop. That's why I have decided to fix all the current bugs (and issues posted here).
+This will be the last release of the project in it's current form
+
+
 ==0.3==
-When writing the development philosophy I decided that shumvc has to be compatible with PHP 5.2.13. This means that some parts of the application have to be changed.
-At this moment it seems like the following should be done:
+The next design of the mvc will be all according to the philosophy. This means some things will change:
+* Strict Frontcontroller pattern (j2ee)
+* leave out orm & template engines
+* create a caching mechanism (which can be turned on/off)
+* create a plugin platform for use of orm and template engines
+* config through xml
+* url also though index.php?page=foo when mod rewite isn't enabled
+* fully commented using php documentor
+* fully documented in wiki
 
-    * Switching to another ORM, Doctrine requires PHP 5.2.3. _Though the system should be compatible with Doctrine non-the-less._
 
-
-At this point I don't know what else should be replaced therefor prior to releasing shumvc 0.3 I will test it on a very minimal PHP 5.0 web-server.
-==0.4==
-
+==Beyond==
+Things i'm thinking of implementing are among others:
     * Documentation (wiki) of system requirements
     * Dynamic URL's
-
-==0.5==
-
     * Form factory for easy setting up forms
-
-==0.6==
-
     * Scripts for easy CRUD generation
     * Scripts for initial application setup
 
-==Beyond==
-Ideas for this mvc continue to evolve while developing. Therefor, at this point, I don't know what version 0.7 will have to offer.
 If you have any ideas about functionality which you would like to see please describe them in a _New Issue_ under the _Issues_ tab.
